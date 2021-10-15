@@ -7,13 +7,14 @@ public class Calculator {
         int operand2;
         String sign;
 
-        System.out.print("Введите целое число1: Enter ");
-        System.out.print("Введите целое число2: Enter ");
-        System.out.print("Выберите действие +, -, *, / Enter");
-
+        System.out.print("Введите целое число1:");
         operand1 = scan.nextInt();
+        System.out.print("Введите целое число2:");
         operand2 = scan.nextInt();
+        System.out.print("Выберите действие +, -, *, /");
         sign = scan.next();
+
+
 
         switch (sign) {
             case "-":
