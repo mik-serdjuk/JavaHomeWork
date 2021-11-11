@@ -11,7 +11,25 @@ public class Reader {
         //this(title, String author, int year);
         this.fio = fio;
     }
+   /* public void takeBook(int count) {
+        System.out.println("Петров В.В. взял" + count + "книги");
+    }
+    public void takeBook(String fio, String title) {
+        System.out.println(fio + "взял книги:" + title);
+    }
+    public void takeBook(String fio, String title, String author, int year) {
+        System.out.println(fio + "взял книги:" + title + author + year);
+    }
 
+    public void returnBook(String fio) {
+        System.out.println( fio + "вернул 3 книги");
+    }
+    public void returnBook(String fio, String title) {
+        System.out.println(fio + "вернул книги:" + title);
+    }
+    public void returnBook(String fio, String title, String author, int year) {
+        System.out.println(fio + "вернул книги:" + title + author + year);
+    }*/
     public String getFio() {
         return fio;
     }

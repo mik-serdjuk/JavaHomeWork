@@ -1,52 +1,46 @@
 package com.pb.serdjuk.HomeWork6;
 
+import java.util.Objects;
+
 public class Horse extends Animal {
-    private String hor1;
-    private String hor2;
+    private int speed;
 
-    public Horse(String food, String location, String hor1, String hor2) {
-        super(food, location);
-        this.hor1 = hor1;
-        this.hor2 = hor2;
-    }
 
-    public String getHor1() {
-
-        return hor1;
-    }
-
-    public void setHor1(String hor1) {
-
-        this.hor1 = hor1;
-    }
-
-    public String getHor2() {
-
-        return hor2;
-    }
-
-    public void setHor2(String hor2) {
-
-        this.hor2 = hor2;
+    public Horse(String name, int speed) {
+        super(name);
+        this.speed = speed;
     }
 
     @Override
     public void makeNoise() {
-
-        System.out.println(hor1 + "ржет");
+        System.out.println("Иго-го-го-го");
     }
 
     @Override
     public void eat() {
+        System.out.println(name  + "ест" + food);
+    }
 
-        System.out.println(hor2 + "принимает" + getFood());
+    public int getSpeed() {
+        return speed;
+    }
+
+    public void setSpeed(int speed) {
+        this.speed = speed;
     }
 
     @Override
-    public String toString() {
-        return "Horse{" +
-                "hor1='" + hor1 + '\'' +
-                ", hor2='" + hor2 + '\'' +
-                '}';
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        if (!super.equals(o)) return false;
+        Horse horse = (Horse) o;
+        return speed == horse.speed;
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(super.hashCode(), speed);
+    }
+
 }

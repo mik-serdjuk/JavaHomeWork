@@ -1,51 +1,63 @@
 package com.pb.serdjuk.HomeWork6;
 
+import java.util.Objects;
+
 public class Animal {
-    private String food;
-    private String location;
+    protected String food;
+    protected String location;
+    protected final String name;
 
-    public Animal(String food, String location) {
-        this.food = food;
-        this.location = location;
-    }
 
-    public Animal() {
-
+    public Animal(String name) {
+        this.name = name;
     }
 
     public String getFood() {
         return food;
     }
+
     public void setFood(String food) {
-        this.food = food;
+        /*if (food != null && !food.isEmpty())проверка на null и пустое значение*/ {
+            this.food = food;
+        }
     }
     public String getLocation() {
-
         return location;
     }
-    public void setLocation(String location) {
 
+    public void setLocation(String location) {
         this.location = location;
     }
-    public void makeNoise() {
 
+    public String getName() {
+        return name;
+    }
+
+    public void makeNoise() {
         System.out.println("животное шумит");
     }
-    public void eat() {
 
+    public void eat() {
         System.out.println("животное ест");
     }
-    public void sleep() {
 
+    public void sleep() {
         System.out.println("животное спит");
     }
-    public void fd() {
 
-        System.out.println(food);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Animal animal = (Animal) o;
+        return Objects.equals(food, animal.food)
+                && Objects.equals(location, animal.location)
+                && Objects.equals(name, animal.name);
     }
-    public void ad() {
 
-        System.out.println(location);
+    @Override
+    public int hashCode() {
+        return Objects.hash(food, location, name);
     }
 }
 
