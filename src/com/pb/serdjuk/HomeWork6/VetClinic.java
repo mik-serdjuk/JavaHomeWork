@@ -33,7 +33,7 @@ public class VetClinic {
          //Object vet = constr.newInstance();
 
          Constructor constr = clazz.getConstructor(String.class);
-         Object vet = constr.newInstance("Айболит");
+         Object vet = constr.newInstance("Скворцов");
 
          Method treatAnimal = clazz.getMethod("treatAnimal", Animal.class);
 
