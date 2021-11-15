@@ -12,14 +12,15 @@ public class Tie extends Clothes implements ManClothes, WomenClothes {
         super(size, price, color);
     }
 
-    @Override
-    public void dressMan(String dressman) {
+
+
+    public void dressMan() {
         String tie = tie;
         System.out.println(int size, int price, String color, tie);
     }
 
-    @Override
-    public void dressWomen(String dresswomеn) {
+
+    public void dressWomen() {
         String tie = tie;
         System.out.println(int size, int price, String color, tie);
     }

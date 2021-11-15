@@ -16,18 +16,16 @@ public class Aelier {
          for (Clothes clothe: clothes) {
             if (clothe instanceof ManClothes) {
                 ManClothes manClothes = (ManClothes) clothe;
-                ManClothes.dressMan("Одеть мужчину");
+                ManClothes.dressMan();
             }
     }
 }
-
-
 
     public static void dressWomen (Clothes[] clothes) {
         for (Clothes clothe: clothes) {
             if (clothe instanceof WomenClothes) {
                 WomenClothes womenClothes = (WomenClothes) clothe;
-                WomenClothes.dressWomen("Одеть женщину");
+                WomenClothes.dressWomen();
             }
         }
 

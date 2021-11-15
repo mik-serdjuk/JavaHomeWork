@@ -7,40 +7,61 @@ public enum Size {
     M,
     L;
 
-    public String getDescription(Size size) {
-        Size size = new Size();
-        if (size == XXS) {
-            System.out.print("Детский размер");
+    private String description;
+    private int euroSize;
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getEuroSize() {
+        return euroSize;
+    }
+
+    public String getDescription(Size description) {
+        Size description = new Size();
+        if (description == XXS) {
+            System.out.print("Детский размер" + description);
         } else {
-            System.out.println("Взрослый размер");
+            System.out.println("Взрослый размер" + description);
         }
         break;
-        return size;
+        return description;
 
     }
 
-    public int getEuroSize(Size size) {
-        Size size1 = new Size();
-        switch (size1) {
+    public int getEuroSize(Size euroSize) {
+        Size euroSize = new Size();
+        switch (euroSize) {
             case XXS:
-                size1 = 32;
+                euroSize = 32;
                 break;
             case XS:
-                size1 = 34;
+                euroSize = 34;
                 break;
             case S:
-                size1 = 36;
+                euroSize = 36;
                 break;
             case M:
-                size1 = 38;
+                euroSize = 38;
                 break;
             case L:
-                size1 = 40;
+                euroSize = 40;
                 break;
         }
-        return size1;
+        return euroSize;
     }
 
-    Size(String size, int size1) {
+    Size(String description, int euroSize) {
+        this.description = description;
+        this.euroSize = euroSize;
+    }
+
+    @Override
+    public String toString() {
+        return "Size{" +
+                "description='" + description + '\'' +
+                ", euroSize=" + euroSize +
+                '}';
     }
 }

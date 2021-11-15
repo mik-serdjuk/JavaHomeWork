@@ -9,13 +9,13 @@ public class Skirt extends Clothes implements ManClothes, WomenClothes {
     }
 
     @Override
-    public void dressMan(String dressman) {
+    public void dressMan() {
         String skirt = skirt;
         System.out.println(int size, int price, String color, skirt);
     }
 
     @Override
-    public void dressWomen(String dresswomеn) {
+    public void dressWomen() {
         String skirt = skirt;
         System.out.println(int size, int price, String color, skirt);
     }
