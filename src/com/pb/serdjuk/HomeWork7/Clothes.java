@@ -1,9 +1,9 @@
 package com.pb.serdjuk.HomeWork7;
 
 public abstract class Clothes {
-    protected Size size;
-    protected int price;
-    protected String color;
+    protected final Size size;
+    protected final int price;
+    protected final String color;
 
 
     public Clothes(Size size, int price, String color) {
@@ -11,4 +11,22 @@ public abstract class Clothes {
         this.price = price;
         this.color = color;
     }
+
+    public Size getSize() {
+        return size;
+    }
+
+    public int getPrice() {
+        return price;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public String getInfo() {
+        return "размер " + size.name() +  "  "  +  size.getEuroSize() +  "  " + size.getDescription() +
+                " цвет " +  color  + " стоимость "  +  price;
+    }
+
 }

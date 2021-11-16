@@ -1,14 +1,19 @@
 package com.pb.serdjuk.HomeWork7;
 
 public enum Size {
-    XXS,
-    XS,
-    S,
-    M,
-    L;
+    XXS("Детский размер",  32),
+    XS("Взрослый размер" ,34 ),
+    S("Взрослый размер", 36),
+    M("Взрослый размер", 38),
+    L("Взрослый размер", 40);
 
     private String description;
     private int euroSize;
+
+    Size(String description, int euroSize) {
+        this.description = description;
+        this.euroSize = euroSize;
+    }
 
     public String getDescription() {
         return description;
@@ -18,50 +23,4 @@ public enum Size {
         return euroSize;
     }
 
-    public String getDescription(Size description) {
-        Size description = new Size();
-        if (description == XXS) {
-            System.out.print("Детский размер" + description);
-        } else {
-            System.out.println("Взрослый размер" + description);
-        }
-        break;
-        return description;
-
-    }
-
-    public int getEuroSize(Size euroSize) {
-        Size euroSize = new Size();
-        switch (euroSize) {
-            case XXS:
-                euroSize = 32;
-                break;
-            case XS:
-                euroSize = 34;
-                break;
-            case S:
-                euroSize = 36;
-                break;
-            case M:
-                euroSize = 38;
-                break;
-            case L:
-                euroSize = 40;
-                break;
-        }
-        return euroSize;
-    }
-
-    Size(String description, int euroSize) {
-        this.description = description;
-        this.euroSize = euroSize;
-    }
-
-    @Override
-    public String toString() {
-        return "Size{" +
-                "description='" + description + '\'' +
-                ", euroSize=" + euroSize +
-                '}';
-    }
 }

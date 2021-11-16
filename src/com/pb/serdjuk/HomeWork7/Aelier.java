@@ -2,30 +2,32 @@ package com.pb.serdjuk.HomeWork7;
 
 public class Aelier {
     public static void main(String[] args) {
-        Tshirt tshirt = new Tshirt();
-        Pants pants = new Pants();
-        Skirt skirt = new Skirt();
-        Tie tie = new Tie();
+        Clothes[] clothes = new Clothes[] {
+        new Tshirt(Size.S, 35, "червоний"),
+        new Pants(Size.M, 99, "black"),
+        new Skirt(Size.XS, 50, "green"),
+        new Tie(Size.L, 35, "blue")
+        };
 
-        Clothes[] clothes = new Clothes[] {tshirt, pants, skirt, tie};
         dressMan(clothes);
+
+        System.out.println();
+
         dressWomen(clothes);
 
     }
-    public static void dressMan (Clothes[] clothes) {
+    private static void dressMan (Clothes[] clothes) {
          for (Clothes clothe: clothes) {
             if (clothe instanceof ManClothes) {
-                ManClothes manClothes = (ManClothes) clothe;
-                ManClothes.dressMan();
+                ((ManClothes) clothe).dressMan();
             }
     }
 }
 
-    public static void dressWomen (Clothes[] clothes) {
+    private static void dressWomen (Clothes[] clothes) {
         for (Clothes clothe: clothes) {
             if (clothe instanceof WomenClothes) {
-                WomenClothes womenClothes = (WomenClothes) clothe;
-                WomenClothes.dressWomen();
+                ((WomenClothes) clothe).dressWomen();
             }
         }
 
