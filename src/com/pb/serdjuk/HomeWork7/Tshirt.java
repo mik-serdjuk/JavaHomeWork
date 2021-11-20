@@ -11,7 +11,8 @@ public class Tshirt extends Clothes implements ManClothes, WomenClothes {
     }
 
     @Override
-    public void dressWomen() {
+    public void dressWomen()
+    {
         System.out.println("женщина одевает футболку " + getInfo());
     }
 }
