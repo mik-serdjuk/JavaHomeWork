@@ -1,7 +1,7 @@
 package com.pb.serdjuk.HomeWork8;
 
 public class WrongPasswordException extends Exception {
-    public WrongPasswordException() {
+    public WrongPasswordException(boolean result1) {
     }
 
     public WrongPasswordException(String message) {
