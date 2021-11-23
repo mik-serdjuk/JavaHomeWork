@@ -43,13 +43,13 @@ public class Auth {
         /*}*/
         /*do {*/
             System.out.println("Введите пароль (Пароль должен содержать только " +
-                    "латинские буквы и цифры и знак подчеркивания, более 5 символов): ");
+                    "латинские буквы(прописные и заглавные) и цифры и знак подчеркивания, более 5 символов): ");
             password = scan.nextLine();
             System.out.println("Повторите пароль (Пароль должен содержать только " +
-                    "латинские буквы и цифры и знак подчеркивания, более 5 символов): ");
+                    "латинские буквы(прописные и заглавные) и цифры и знак подчеркивания, более 5 символов): ");
             confirmpassword = scan.nextLine();
             boolean result1 = password.matches("(^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[_])(?=\\S+$).{5,}$)");
-            if (result1 && password == confirmpassword) {
+            if (result1 && password.equals(confirmpassword)) {
                 password = getPassword(); //new password();
                 System.out.println("password true");
             } else {
@@ -59,7 +59,7 @@ public class Auth {
        /* }*/
     }
         public void signin(String login, String password) throws WrongLoginException{
-            if (login == getLogin() && password == getPassword()) {
+            if (login.equals(getLogin()) && password.equals(getPassword())) {
                 System.out.println("Добро пожаловать");
             } else {
                 System.out.println("Неверный логин или пароль");
