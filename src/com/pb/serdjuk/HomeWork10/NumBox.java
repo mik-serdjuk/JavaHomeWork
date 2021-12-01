@@ -1,12 +1,12 @@
 package com.pb.serdjuk.HomeWork10;
 
 
-public class NumBox <T extends Number>{
-    private final T[] numbers;
+public class NumBox <T extends Number> {
+    /*private final T[] numbers;
     public int length;
-    int size[];
+    int size[];*/
 
-    // в кострукторе принимаем размер масиива size
+/*    // в кострукторе принимаем размер масиива size
     public NumBox (int size) {
 
     //создали массив из объектов класса T
@@ -55,4 +55,5 @@ public class NumBox <T extends Number>{
         System.out.println(cmax);
         return cmax;
     }
+}*/
 }

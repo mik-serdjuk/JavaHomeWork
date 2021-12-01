@@ -4,7 +4,7 @@ import java.io.Reader;
 
 public class Test2 {
     public static void main(String[] args) {
-        // Creates an array of character
+       /* // Creates an array of character
         char[] array = new char[100];
 
         // Creates a reader using the FileReader
@@ -21,5 +21,6 @@ public class Test2 {
         } catch(Exception e) {
             e.printStackTrace();
         }
+    }*/
     }
 }
