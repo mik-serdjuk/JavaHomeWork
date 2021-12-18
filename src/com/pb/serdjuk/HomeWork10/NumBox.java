@@ -61,6 +61,6 @@ public class NumBox<T extends Number> {
             }
         }
         return numbers[maxIndex];
-    }
+        }
 }
 

@@ -17,7 +17,7 @@ public class Main {
 
        try {
            LogManager logManager = LogManager.getLogManager();
-           Path logConfigPath = Paths.get("src/hw9/logging.properties");
+           Path logConfigPath = Paths.get("src/HomeWork9/logging.properties");
            InputStream logConfigIs = Files.newInputStream(logConfigPath);
            logManager.readConfiguration(logConfigIs);
        } catch (Exception ex) {
