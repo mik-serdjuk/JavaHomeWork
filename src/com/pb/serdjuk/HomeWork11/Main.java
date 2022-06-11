@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Scanner;
 
 
-public class Main {
+/*public class Main {
     public static void main(String[] args) {
         ObjectMapper mapper = new ObjectMapper();
         // pretty printing (json с отступами)
@@ -32,8 +32,8 @@ public class Main {
 
         Scanner scan = new Scanner(System.in);
 
-        LocalDateTime today = LocalDateTime.now();
-
+        LocalDateTime today = LocalDateTime.now();*/
+/*
         List<Person> persons = Arrays.asList(
                 new Person("Pit",
                         LocalDate.of(2000, 5, 2),
@@ -61,8 +61,8 @@ public class Main {
                 String name = scan.nextLine();
                 person.setName(name);
                 System.out.println("Введите дату рождения: год, месяц, число: ");
-                /*LocalDate dateOfBirth = scan.nextLine();
-                person.setDateOfBirth(dateOfBirth);*/
+                *//*LocalDate dateOfBirth = scan.nextLine();
+                person.setDateOfBirth(dateOfBirth);*//*
                 System.out.println("Введите телефон: ");
                 String phone = scan.nextLine();
                 person.setPhone(phone);
@@ -71,10 +71,10 @@ public class Main {
                 person.setAdds(adds);
                 persons.add(person);
                 System.out.println(persons);
-                /*new persons(scan.next());
+                *//*new persons(scan.next());
                 System.out.print(persons);
-                break;*/
-            /*case "+":
+                break;*//*
+            *//*case "+":
                 System.out.println(operand1 + operand2);
                 break;
             case "*":
@@ -88,10 +88,10 @@ public class Main {
                 }
 
             default:
-                throw new IllegalStateException("Unexpected value: " + sign);*/
+                throw new IllegalStateException("Unexpected value: " + sign);*//*
                 break;
             default:
                 throw new IllegalStateException("Unexpected value: " + sign);
         }
     }
-}
+}*/

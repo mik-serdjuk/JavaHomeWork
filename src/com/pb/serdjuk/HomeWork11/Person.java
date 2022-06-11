@@ -3,22 +3,34 @@ package com.pb.serdjuk.HomeWork11;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
+import java.util.Objects;
 
 public class Person {
+    private int id;
     private String name;
     private LocalDate dateOfBirth;
-    private String phone;
+    private List<String> phone;
     private String adds;
-    private LocalDateTime datetime;
-
-    public Person(String next) {
-    }
-
-    public Person(List<Person> persons) {
-    }
+    private LocalDateTime Ntime;
 
     public Person() {
+    }
 
+    public Person(int id, String name, LocalDate dateOfBirth, List<String> phone, String adds, LocalDateTime ntime) {
+        this.id = id;
+        this.name = name;
+        this.dateOfBirth = dateOfBirth;
+        this.phone = phone;
+        this.adds = adds;
+        Ntime = ntime;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -37,11 +49,11 @@ public class Person {
         this.dateOfBirth = dateOfBirth;
     }
 
-    public String getPhone() {
+    public List<String> getPhone() {
         return phone;
     }
 
-    public void setPhone(String phone) {
+    public void setPhone(List<String> phone) {
         this.phone = phone;
     }
 
@@ -53,30 +65,25 @@ public class Person {
         this.adds = adds;
     }
 
-    public LocalDateTime getDatetime() {
-        return datetime;
+    public LocalDateTime getNtime() {
+        return Ntime;
     }
 
-    public void setDatetime(LocalDateTime datetime) {
-        this.datetime = datetime;
-    }
-
-    public Person(String name, LocalDate dateOfBirth, String phone, String adds, LocalDateTime datetime) {
-        this.name = name;
-        this.dateOfBirth = dateOfBirth;
-        this.phone = phone;
-        this.adds = adds;
-        this.datetime = datetime;
+    public void setNtime(LocalDateTime ntime) {
+        Ntime = ntime;
     }
 
     @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", dateOfBirth=" + dateOfBirth +
-                ", phone='" + phone + '\'' +
-                ", adds='" + adds + '\'' +
-                ", datetime=" + datetime +
-                '}';
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Person person = (Person) o;
+        return id == person.id && Objects.equals(name, person.name) && Objects.equals(dateOfBirth, person.dateOfBirth) && Objects.equals(phone, person.phone) && Objects.equals(adds, person.adds) && Objects.equals(Ntime, person.Ntime);
     }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(id, name, dateOfBirth, phone, adds, Ntime);
+    }
+
 }
